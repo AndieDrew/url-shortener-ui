@@ -5,31 +5,31 @@ import UrlContainer from '../UrlContainer/UrlContainer';
 import UrlForm from '../UrlForm/UrlForm';
 
 export class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       urls: []
     }
   }
 
   componentDidMount() {
-    getUrls()
-      .then(data => {
-        this.setState({urls:  data.urls})
-      })
-
+    this.fetchData()
   }
 
-  // addUrl= ( newUrl ) => {
-  //   this.setState({ urls: [...this.state.urls, newUrl] });
-  // }
+  fetchData = () => {
+    console.log('PROPS FETCH DATA INVOKE');
+    getUrls()
+    .then(data => {
+      this.setState({urls:  data.urls})
+    })
+  }
 
   render() {
     return (
       <main className="App">
         <header>
           <h1>URL Shortener</h1>
-          <UrlForm addUrl={this.addUrl}/>
+          <UrlForm addUrl={this.fetchData}/>
         </header>
 
         <UrlContainer urls={this.state.urls}/>
