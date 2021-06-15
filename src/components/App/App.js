@@ -15,7 +15,7 @@ export class App extends Component {
   componentDidMount() {
     getUrls()
       .then(data => {
-        this.setState({urls: [...this.state.urls, data]})
+        this.setState({urls:  data.urls})
       })
 
   }
