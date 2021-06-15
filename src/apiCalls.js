@@ -5,7 +5,6 @@ export const getUrls = () => {
 
 
 export const postUrl = ( newUrl ) => {
-  console.log("POST FIRED", newUrl);
   fetch('http://localhost:3001/api/v1/urls', {
       method: 'POST',
       body: JSON.stringify({
