@@ -17,7 +17,7 @@ const UrlContainer =  props  => {
       { !urlEls.length  &&
        <p>No urls yet! Find some to shorten!</p>
       }
-      <div className='urlsContainer'>
+      <div>
         <p>You have URLs!</p>
         {urlEls}
       </div>
