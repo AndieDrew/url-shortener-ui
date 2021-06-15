@@ -18,8 +18,8 @@ describe('Dashboard', () => {
     it('Should show form', () => {
         cy.load()
           .get('form').should('be.visible')
-          .get('.titleInput').should('be.visible').should('contain', '')
-          .get('.urlInput').should('be.visible').should('contain', '')
+          .get('.titleInput').should('be.visible').should('contain', '').should('have.value', '')
+          .get('.urlInput').should('be.visible').should('contain', '').should('have.value', '')
           .get('form > button').should('be.visible').should('contain', 'Shorten Please!')
     })
 
