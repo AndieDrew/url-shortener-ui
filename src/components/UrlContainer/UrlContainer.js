@@ -14,7 +14,12 @@ const UrlContainer = props => {
 
   return (
     <section>
-      { urlEls.length ? urlEls : <p>No urls yet! Find some to shorten!</p> }
+      { !urlEls.length  &&
+       <p>No urls yet! Find some to shorten!</p>
+      }
+      <div>
+        <p>You have URLs!</p>
+      </div>{urlEls}
     </section>
   )
 }
