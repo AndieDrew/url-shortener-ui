@@ -22,5 +22,11 @@ describe('Dashboard', () => {
           .get('.urlInput').should('be.visible').should('contain', '')
           .get('form > button').should('be.visible').should('contain', 'Shorten Please!')
     })
+
+    it('Should show user inputs', () => {
+        cy.load()
+          .get('.titleInput').should('be.visible').type('Testing title input').should('have.value', 'Testing title input')
+          .get('.urlInput').should('be.visible').type('Testing url input').should('have.value', 'Testing url input')
+    })
     
 });
