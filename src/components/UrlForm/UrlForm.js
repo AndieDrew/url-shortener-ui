@@ -21,7 +21,7 @@ class UrlForm extends Component {
       id: Date.now(),
       ...this.state
     }
-    console.log(newUrl);
+    postUrl(newUrl)
     this.props.addUrl( newUrl )
     this.clearInputs();
   }

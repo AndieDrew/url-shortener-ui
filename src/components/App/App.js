@@ -20,9 +20,9 @@ export class App extends Component {
 
   }
 
-  addUrl= ( newUrl ) => {
-    this.setState({ urls: [...this.state.reservations, newUrl] });
-  }
+  // addUrl= ( newUrl ) => {
+  //   this.setState({ urls: [...this.state.urls, newUrl] });
+  // }
 
   render() {
     return (
