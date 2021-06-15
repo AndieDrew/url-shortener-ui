@@ -17,7 +17,6 @@ export class App extends Component {
   }
 
   fetchData = () => {
-    console.log('PROPS FETCH DATA INVOKE');
     getUrls()
     .then(data => {
       this.setState({urls:  data.urls})
