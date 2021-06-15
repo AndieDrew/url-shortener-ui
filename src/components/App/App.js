@@ -20,6 +20,10 @@ export class App extends Component {
 
   }
 
+  addUrl= ( newUrl ) => {
+    this.setState({ urls: [...this.state.reservations, newUrl] });
+  }
+
   render() {
     return (
       <main className="App">
