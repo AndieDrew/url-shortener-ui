@@ -22,7 +22,8 @@ class UrlForm extends Component {
       ...this.state
     }
     postUrl(newUrl)
-    this.props.addUrl( newUrl )
+    .then( () => this.props.addUrl())
+    
     this.clearInputs();
   }
 
