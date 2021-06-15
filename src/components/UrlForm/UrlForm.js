@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { postUrl } from '../../apiCalls'
 
 class UrlForm extends Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class UrlForm extends Component {
       ...this.state
     }
     console.log(newUrl);
+    this.props.addUrl( newUrl )
     this.clearInputs();
   }
 
